@@ -1,7 +1,72 @@
-<h1>This is a haiku:</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haiku with Cube Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: 
+        url('https://media.springernature.com/w735h400/nature-cms/uploads/cms/pages/7531/top_item_image/Eye_hero-1a07d0e7d224bdb3db50da7eb6f6d53c.jpg');
+      background-repeat: repeat;
+      background-size: 50% 50%;
+      perspective: 1000px;
+      height: 100vh;
+      color: white; /* Set text color to white */
+    }
 
-<h2>
-  &nbsp;&nbsp;LOL Cats are nowhere<br>
-  &nbsp;&nbsp;None of this makes sense to me<br>
-  &nbsp;&nbsp;I can’t disappear<br>
-</h2>
+    body:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      transform: translateZ(-500px);
+    }
+
+    body:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      transform: rotateY(90deg) translateZ(-500px);
+    }
+
+    body:before, body:after {
+      transform-origin: 0 0;
+    }
+
+    body:before {
+      transform-origin: 0 100%;
+    }
+
+    body:after {
+      transform-origin: 100% 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      padding-left: 40px; /* Increase padding to prevent text from being cut off */
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a haiku:</h1>
+
+  <h2>
+    &nbsp;&nbsp;LOL Cats are nowhere<br>
+    &nbsp;&nbsp;None of this makes sense to me<br>
+    &nbsp;&nbsp;I can’t disappear<br>
+  </h2>
+</body>
+</html>
