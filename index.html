@@ -78,6 +78,11 @@
     setTimeout(function() {
       // Change the background image after 10 seconds
       document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/d/d9/Venn-diagram-cinema-verite-direct-cinema-observational-cinema.png')";
+      
+      // After another 10 seconds, change back to the eye image
+      setTimeout(function() {
+        document.body.style.backgroundImage = "url('https://media.springernature.com/w735h400/nature-cms/uploads/cms/pages/7531/top_item_image/Eye_hero-1a07d0e7d224bdb3db50da7eb6f6d53c.jpg')";
+      }, 10000); // 10 seconds
     }, 10000); // 10 seconds
   </script>
 </body>
